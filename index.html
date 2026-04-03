@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Custom Stylesheet -->
+    <link rel="stylesheet" href="style.css">
+
+    <title>Plan My Meal</title>
+</head>
+
+<body>
+    <h1>PlanMyPlate</h1>
+
+    <!-- Instruction Section -->
+
+    <!-- Instructions Section Begin-->
+
+    <div class="instructions">
+        <h2>How to start using 'Plan My Plate'</h2>
+        <ol>
+            <li>Select your meals for each day of the week.</li>
+            <li>Generate shopping list for the selected meals.</li>
+            <li>Save your meal plan once you've selected meals for each day.</li>
+            <li>Repeat the process for each day until you have a complete meal plan for the week.</li>
+            <li>'Plan My Plate' will automatically calculate the total prep time needed for the week's meals.</li>
+        </ol>
+    </div>
+
+    <!-- Instructions Section End -->
+
+    <!-- Meal Options and Plate Section-->
+     
+    <div class="row">
+
+        <!-- Meal Options Section Begin-->
+        <div class="meal-options">
+            <h2>Meal Options</h2>
+            <div>
+                <h3>Breakfast</h3>
+                <ul id="breakfast-options" class="draggable-items">
+                    <li draggable="true" data-category="Breakfast" data-name="Oatmeal">Oatmeal</li>
+                    <li draggable="true" data-category="Breakfast" data-name="Pancakes">Pancakes</li>
+                    <li draggable="true" data-category="Breakfast" data-name="Eggs">Eggs</li>
+                    <li draggable="true" data-category="Breakfast" data-name="Smoothie">Smoothie</li>
+                    <li draggable="true" data-category="Breakfast" data-name="Toast">Toast</li>
+                </ul>
+            </div>
+            <div>
+                <h3>Lunch</h3>
+                <ul id="lunch-options" class="draggable-items">
+                    <li draggable="true" data-category="Lunch" data-name="Chicken Salad">Chicken Salad</li>
+                    <li draggable="true" data-category="Lunch" data-name="Sandwich">Sandwich</li>
+                    <li draggable="true" data-category="Lunch" data-name="Soup">Soup</li>
+                    <li draggable="true" data-category="Lunch" data-name="Sushi">Sushi</li>
+                    <li draggable="true" data-category="Lunch" data-name="Pasta">Pasta</li>
+                </ul>
+            </div>
+            <div>
+                <h3>Dinner</h3>
+                <ul id="lunch-options" class="draggable-items">
+                    <li draggable="true" data-category="Dinner" data-name="Steak">Steak</li>
+                    <li draggable="true" data-category="Dinner" data-name="Grilled Fish">Grilled Fish</li>
+                    <li draggable="true" data-category="Dinner" data-name="Vegetable Stir-Fry">Vegetable Stir-Fry</li>
+                    <li draggable="true" data-category="Dinner" data-name="Tacos">Tacos</li>
+                    <li draggable="true" data-category="Dinner" data-name="Risotto">Risotto</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Meal Options Section End-->
+
+        <!-- Plate Section Begins -->
+
+        <div class="plate">
+            <h2>Your Plate</h2>
+            <select id="day-selector">
+                <option value="Monday">Monday</option>
+                <option value="Tuesday">Tuesday</option>
+                <option value="Wednesday">Wednesday</option>
+                <option value="Thursday">Thursday</option>
+                <option value="Friday">Friday</option>
+                <option value="Saturday">Saturday</option>
+                <option value="Sunday">Sunday</option>
+            </select>
+            <ul id="plate-items" class="droppable-area"></ul>
+            <button onclick="saveMealPlan()">Save Meal Plan</button>
+        </div>
+     </div>
+
+    <!-- Meal Options and Plate Section End-->
+
+    <!-- Shopping List and Saved Meals Section -->
+
+    <div class="row">
+
+        <!-- Shopping List Section -->
+
+        <div class="shopping-list">
+            <h2>Shopping List</h2>
+            <ul id="shopping-list"></ul>
+            <button onclick="generateShoppingList()">Generate Shopping List</button>
+        </div>
+
+        <!-- Shopping List Section End -->
+
+        <!-- Suggestion Section -->
+
+        <div class="saved-meals">
+            <h2>Saved Meals</h2>
+            <ul id="saved-meals-list"></ul>
+            <button onclick="clearSavedMeals()">Clear all Saved Meals</button>
+        </div>
+
+        <!-- Suggestion Section End -->
+    </div> 
+
+    <!-- Shopping List and Saved Meals Section End -->
+
+    <script src="index.js"></script>
+</body>
+
+</html>

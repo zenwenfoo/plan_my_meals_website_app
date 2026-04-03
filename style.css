@@ -1,0 +1,285 @@
+/* Basic Reset OR Clean Slate */
+
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* General Body Styling */
+
+body
+{
+    font-family: Arial, sans-serif;
+    background-color: #a2cad8;
+    color: #333;
+    padding: 20px;
+}
+
+h1
+{
+    text-align: center;
+    color: #2c3e50;
+    margin-bottom: 40px;
+}
+
+/* Instructions Area Styling */
+.instructions 
+{
+    background-color: #f9f9f9;
+    padding: 20px;
+    margin-bottom: 30px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    width: 80%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.instructions h2
+{
+    color: #333;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.instructions ol
+{
+    text-align: left;
+    font-size: 18px;
+    margin-left: 20px;
+}
+
+.instructions ol li 
+{
+    margin-bottom: 10px;
+}
+
+/* Meal Options Styling */
+.meal-options
+{
+    width: 30%;
+    background-color: #ffffff;
+    border-radius: 8px;
+}
+
+.meal-options h2 
+{
+    text-align: center;
+    color: #16a085;
+    margin-bottom: 20px;
+}
+
+.meal-options h3
+{
+    color: #34495e;
+    margin-bottom: 10px;
+}
+
+.draggable-items
+{
+    list-style: none;
+    padding: 0;
+}
+
+.draggable-items li 
+{
+    background-color: #ecf0f1;
+    padding: 10px;
+    margin: 5px 0;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+.draggable-items li:hover 
+{
+    background-color: #bdc3c7;
+}
+
+/* Plate Styling */
+.plate
+{
+    width: 30%;
+    background-color: #ffffff;
+    border-radius: 8px;
+}
+
+.plate h2 
+{
+    text-align: center;
+    color: #16a085;
+    margin-bottom: 20px;
+}
+
+#plate-items
+{
+    list-style: none;
+    padding: 0;
+    min-height: 100px;
+    background-color: #ecf0f1;
+    border: 2px dashed #34495e;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+#plate-items li
+{
+    padding: 10px;
+    background-color: #ffffff;
+    margin: 5px 0;
+    border-radius: 5px;
+}
+
+#plate-items li:hover 
+{
+    background-color: #bdc3c7;
+}
+
+select 
+{
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: 1px solid #34495e;
+}
+
+/* Buttons Styling */
+button 
+{
+    background-color: #4CAF50;
+    color: #ffffff;
+    padding: 8px 16px;
+    margin-top: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover
+{
+    background-color: #45A049;
+}
+
+/* Shopping List and Saved Meals Styling */
+
+.shopping-list, .saved-meals
+{
+    width: 30%;
+    background-color: #ffffff;
+    border-radius: 8px;
+}
+
+.shopping-list h2, .saved-meals h2 
+{
+    text-align: center;
+    color: #16a085;
+    margin-bottom: 20px;
+}
+
+#shopping-list, #saved-meals-list
+{
+    list-style: none;
+    padding: 0;
+}
+
+#shopping-list li:hover,
+#saved-meals-list li:hover 
+{
+    background-color: #bdc3c7;
+}
+
+/* Centering and layout for saved meals and shopping lists */
+
+.saved-meals, .saved-shopping-lists 
+{
+    width: 50%;
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    margin-top: 30px;
+    text-align: center;
+}
+
+.saved-meals li, .saved-shopping-lists li 
+{
+    border-radius: 5px;
+}
+
+.saved-meals h2
+{
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.saved-shopping-lists h2 
+{
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.instructions 
+{
+    max-width: 800px;
+    margin: 20px auto;
+}
+
+.row 
+{
+    display: flex;
+    justify-content: space-between;
+}
+
+/* Shared Styling for Panels */
+
+.meal-options, .plate, .shopping-list, .saved-meals
+{
+    border: 1px solid #ddd;
+    padding: 10px;
+    flex: 1;
+    margin: 0 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.meal-options ul, .plate ul, .shopping-list ul, .saved-meals ul 
+{
+    list-style: none;
+    padding: 0;
+}
+
+.meal-options li, .plate li, .shopping-list li, .saved-meals li 
+{
+    padding: 8px;
+    border: 1px solid #ddd;
+    margin: 5px 0;
+    background-color: #f9f9f9;
+    cursor: pointer;
+}
+
+/* Responsive Design */
+@media(max-width: 900px)
+{
+    .container
+    {
+        flex-direction: column;
+        align-items: center;
+    }
+    .meal-options, .plate, .shopping-list, .saved-meals
+    {
+        width: 80%;
+        margin-bottom: 20px;
+    }
+}
+
+@media(max-width: 600px)
+{
+    .meal-options, .plate, .shopping-list, .saved-meals
+    {
+        width: 100%;
+    }
+}
+
